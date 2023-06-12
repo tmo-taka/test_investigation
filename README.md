@@ -48,6 +48,47 @@
 | 結合テスト                   | 中           | 中     | 複数のモジュールを組み合わせて予想する結果になるか                       | 
 | E2Eテスト(End to End テスト) | 高           | 高     | ユーザー視点からアプリケーションを触りテスト(インタラクションテスト)     | 
 
+## 上記テストの種類 例 ##
+
+**単体テスト、結合テスト**  
+有名どころのツール：Jest, Vitest
+1. テストファイルに必要なコンポーネントファイルなどをimportする
+2. テストファイルに必要なライブラリも必要
+3. 1のファイルをmount(テスト実行のためセット)
+4. 2を使ってテスト明記
+5. npmコマンドなどでテストファイルごともしくは全てのテスト実行
+
+テストコード例
+
+```typescript
+import { describe, expect, test } from 'vitest';
+import { mount } from '@vue/test-utils'
+import Top from '../components/Top.vue'
+
+describe('TopComponent', () => {
+　　 // TOPコンポーネントをマウント
+    const wrapper = mount(Top);
+    
+    // TOPコンポーネントの初期描画の際にリアクティブデータのcounterが初期値0かのテスト
+    test('first refs of counter = 0', () =>{
+        expect(wrapper.vm.counter).toBe(0);
+    })
+    
+    // TOPコンポーネントでincrement関数(counter ＋１する処理)を実行した際にリアクティブデータのcounterが1になっているかテスト
+    test('after increment refs of counter = 1', async() =>{
+        await wrapper.vm.increment();
+        await expect(wrapper.vm.counter).toBe(1);
+    })
+});
+```
+
+**E2Eテスト**  
+有名どころのツール：PlayWright  
+1. APIでのdocker環境の立ち上げ
+2. アプリケーション(Nuxt)でのdocker環境立ち上げ
+3. テストファイルにページアクセス時のURLなど記載したり、ページアクセスの記載をしたりする
+4. 3のファイルをnpmコマンドで実行する(複雑な遷移をすればするほど複雑に)
+
 ## テストの種類 (他) ##
 | テスト種類                     | テストコスト | 信用性 | テスト内容                                                                                       | 
 | ------------------------------ | ------------ | ------ | ------------------------------------------------------------------------------------------------ | 
@@ -88,6 +129,6 @@
 | テストツール   | - Jest(単体テスト) <br>- testing-library(インタラクションテスト) | 
 | テスト方針     | Jestでの単体テスト、静的解析 (導入を徐々に初めて行っている)      | 
 
-
-
+## Nuxtで欠点
+-
 
