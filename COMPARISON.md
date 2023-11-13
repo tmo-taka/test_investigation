@@ -16,3 +16,6 @@
 ## なぜ人気がでているのか
 - 多くのフロントフレームワークでViteが使用されることが多いため。
 - テストツールで人気のjestと同様のAPIを導入しているためjestからの移行がスムーズ
+
+## Nuxtとの親和性
+- AutoImportへの対応が[unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import)
