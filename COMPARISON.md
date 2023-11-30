@@ -11,7 +11,7 @@ https://jiko21-tech-blog.monster/blog/2022-02-13/vitest-compare-jest
 → watchでテストを回す際にHMRでうまく処理できているので手元でテストを試す際に高速化できる（初めてテストを書く人にとって手元でのテスト実行が高速なためストレス軽減）
 - Nuxt3のデフォルトビルドツールがviteのため導入がスムーズ
 - TypeScriptとjsxをサポート
-- DOMを用いたテストをする際にjestではデフォルトでjsdomが入っているが、vitestには入っていない。そのため新規にhappydom(jsdomより格段に処理が高速)導入できる  
+- DOMを用いたテストをする際にjestではデフォルトでjsdomが入っているが、vitestには入っていない。そのため新規に[happydom](https://www.npmjs.com/package/happy-dom)(jsdomより格段に処理が高速)を導入できる  
 →Bunのテストツールも同様構成
 - 日付のモック作成機能などデフォルトで入っている
 - coverage reportをHTMLで見やすく表示することも可能
