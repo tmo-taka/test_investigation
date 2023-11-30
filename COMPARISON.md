@@ -26,6 +26,16 @@ https://jiko21-tech-blog.monster/blog/2022-02-13/vitest-compare-jest
 → jestの場合は自作でglobalファイルを作成してパス解決していた。。。
 [参考](https://github.com/unplugin/unplugin-auto-import/issues/33)
 
+## 自分の考えた結論
+### vitestの導入を推奨
+以下観点からです。
+- Nuxt3的の観点
+  - テストを導入していくNuxt3のデフォルトのビルドツールがViteのため。
+  - Nuxt3でよく使用されるautoImportへの対応がやりやすいため。
+- WC的の観点
+  - テスト経験者がおらずはじめのうちはローカル環境でテストを実行することが多いため、watchの高速化が作業効率に繋がるため。
+  - WCのサイト上Compoentが100個や200個もあるようなサイトがないため、わかいりやすい記事のような大幅な速度違いはでないと思われるため。
+
 ## 最後にテストにおいて
 vitestはjestに比べまだやりやすいというレベル感です。かつvitestやjestはテストのベースとなるツールなだけでそれを基に多くのライブラリを追加していく必要があります。そのためフロンエンドのテストは少し難しいです。
 また[公式](https://nuxt.com/docs/getting-started/testing)に記載ある通り、Nuxt3はまだストユーティリティはまだ開発中とのことで完全に保証はしてくれていません。
