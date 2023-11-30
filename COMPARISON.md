@@ -28,7 +28,7 @@ https://jiko21-tech-blog.monster/blog/2022-02-13/vitest-compare-jest
 
 ## 自分の考えた結論
 ### vitestの導入を推奨
-以下観点からです。
+以下観点。
 - Nuxt3的の観点
   - テストを導入していくNuxt3のデフォルトのビルドツールがViteのため。
   - Nuxt3でよく使用されるautoImportへの対応がやりやすいため。
