@@ -12,7 +12,7 @@ https://jiko21-tech-blog.monster/blog/2022-02-13/vitest-compare-jest
 - Nuxt3のデフォルトビルドツールがviteのため導入がスムーズ
 - TypeScriptとjsxをサポート
 - DOMを用いたテストをする際にjestではデフォルトでjsdomが入っているが、vitestには入っていない。そのため新規に[happydom](https://www.npmjs.com/package/happy-dom)(jsdomより格段に処理が高速)を導入できる  
-→Bunのテストツールも同様構成
+→[Bun](https://bun.sh/docs/cli/test)のテストツールも同様の構成
 - 日付のモック作成機能などデフォルトで入っている
 - coverage reportをHTMLで見やすく表示することも可能
   ブラウザベースのテストランナー(Cypress,WebdriverIO)との親和性が高い 
