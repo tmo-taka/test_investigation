@@ -38,4 +38,4 @@ https://jiko21-tech-blog.monster/blog/2022-02-13/vitest-compare-jest
 
 ## 最後にテストにおいて
 vitestはjestに比べまだやりやすいというレベル感です。かつvitestやjestはテストのベースとなるツールなだけでそれを基に多くのライブラリを追加していく必要があります。そのためフロンエンドのテストは少し難しいです。
-また[公式](https://nuxt.com/docs/getting-started/testing)に記載ある通り、Nuxt3はまだストユーティリティはまだ開発中とのことで完全に保証はしてくれていません。
+また[公式](https://nuxt.com/docs/getting-started/testing)に記載ある通り、Nuxt3はまだテストユーティリティはまだ開発中とのことで完全に保証はしてくれていません。
